@@ -1,0 +1,223 @@
+# Importing necessary libraries
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+
+# Sample synthetic dataset (you can replace with real-world accident data)
+data = {
+    'weather': [1, 2, 1, 3, 2, 1, 3, 2, 1, 3],        # 1=sunny, 2=rainy, 3=foggy
+    'traffic_volume': [100, 200, 150, 300, 250, 180, 220, 270, 190, 310],
+    'hour': [8, 18, 7, 21, 15, 9, 20, 17, 8, 22],     # time of day (24h)
+    'is_accident': [0, 1, 0, 1, 1, 0, 1, 1, 0, 1]     # target variable (1=accident)
+}
+
+df = pd.DataFrame(data)
+
+# Features and label
+X = df[['weather', 'traffic_volume', 'hour']]
+y = df['is_accident']
+
+# Splitting data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Training the model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predicting
+y_pred = model.predict(X_test)
+
+# Evaluation
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+
+# Visualization (optional)
+plt.scatter(df['traffic_volume'], df['hour'], c=df['is_accident'], cmap='coolwarm')
+plt.xlabel('Traffic Volume')
+plt.ylabel('Hour of Day')
+plt.title('Traffic Accidents Based on Time & Volume')
+plt.colorbar(label='Accident (1) / No Accident (0)')
+plt.show()# Importing necessary librariesimport pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+
+# Sample synthetic dataset (you can replace with real-world accident data)
+data = {
+    'weather': [1, 2, 1, 3, 2, 1, 3, 2, 1, 3],        # 1=sunny, 2=rainy, 3=foggy
+    'traffic_volume': [100, 200, 150, 300, 250, 180, 220, 270, 190, 310],
+    'hour': [8, 18, 7, 21, 15, 9, 20, 17, 8, 22],     # time of day (24h)
+    'is_accident': [0, 1, 0, 1, 1, 0, 1, 1, 0, 1]     # target variable (1=accident)
+}
+
+df = pd.DataFrame(data)
+
+# Features and label
+X = df[['weather', 'traffic_volume', 'hour']]
+y = df['is_accident']
+
+# Splitting data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Training the model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predicting
+y_pred = model.predict(X_test)
+
+# Evaluation
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+
+# Visualization (optional)
+plt.scatter(df['traffic_volume'], df['hour'], c=df['is_accident'], cmap='coolwarm')
+plt.xlabel('Traffic Volume')
+plt.ylabel('Hour of Day')
+plt.title('Traffic Accidents Based on Time & Volume')
+plt.colorbar(label='Accident (1) / No Accident (0)')
+plt.show()# Importing necessary librariesimport pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+
+# Sample synthetic dataset (you can replace with real-world accident data)
+data = {
+    'weather': [1, 2, 1, 3, 2, 1, 3, 2, 1, 3],        # 1=sunny, 2=rainy, 3=foggy
+    'traffic_volume': [100, 200, 150, 300, 250, 180, 220, 270, 190, 310],
+    'hour': [8, 18, 7, 21, 15, 9, 20, 17, 8, 22],     # time of day (24h)
+    'is_accident': [0, 1, 0, 1, 1, 0, 1, 1, 0, 1]     # target variable (1=accident)
+}
+
+df = pd.DataFrame(data)
+
+# Features and label
+X = df[['weather', 'traffic_volume', 'hour']]
+y = df['is_accident']
+
+# Splitting data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Training the model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predicting
+y_pred = model.predict(X_test)
+
+# Evaluation
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+
+# Visualization (optional)
+plt.scatter(df['traffic_volume'], df['hour'], c=df['is_accident'], cmap='coolwarm')
+plt.xlabel('Traffic Volume')
+plt.ylabel('Hour of Day')
+plt.title('Traffic Accidents Based on Time & Volume')
+plt.colorbar(label='Accident (1) / No Accident (0)')
+plt.show()# Importing necessary librariesimport pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+
+# Sample synthetic dataset (you can replace with real-world accident data)
+data = {
+    'weather': [1, 2, 1, 3, 2, 1, 3, 2, 1, 3],        # 1=sunny, 2=rainy, 3=foggy
+    'traffic_volume': [100, 200, 150, 300, 250, 180, 220, 270, 190, 310],
+    'hour': [8, 18, 7, 21, 15, 9, 20, 17, 8, 22],     # time of day (24h)
+    'is_accident': [0, 1, 0, 1, 1, 0, 1, 1, 0, 1]     # target variable (1=accident)
+}
+
+df = pd.DataFrame(data)
+
+# Features and label
+X = df[['weather', 'traffic_volume', 'hour']]
+y = df['is_accident']
+
+# Splitting data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Training the model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predicting
+y_pred = model.predict(X_test)
+
+# Evaluation
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+
+# Visualization (optional)
+plt.scatter(df['traffic_volume'], df['hour'], c=df['is_accident'], cmap='coolwarm')
+plt.xlabel('Traffic Volume')
+plt.ylabel('Hour of Day')
+plt.title('Traffic Accidents Based on Time & Volume')
+plt.colorbar(label='Accident (1) / No Accident (0)')
+plt.show()# Importing necessary libraries
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix
+import matplotlib.pyplot as plt
+
+# Sample synthetic dataset (you can replace with real-world accident data)
+data = {
+    'weather': [1, 2, 1, 3, 2, 1, 3, 2, 1, 3],        # 1=sunny, 2=rainy, 3=foggy
+    'traffic_volume': [100, 200, 150, 300, 250, 180, 220, 270, 190, 310],
+    'hour': [8, 18, 7, 21, 15, 9, 20, 17, 8, 22],     # time of day (24h)
+    'is_accident': [0, 1, 0, 1, 1, 0, 1, 1, 0, 1]     # target variable (1=accident)
+}
+
+df = pd.DataFrame(data)
+
+# Features and label
+X = df[['weather', 'traffic_volume', 'hour']]
+y = df['is_accident']
+
+# Splitting data into training and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Training the model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predicting
+y_pred = model.predict(X_test)
+
+# Evaluation
+print("Confusion Matrix:")
+print(confusion_matrix(y_test, y_pred))
+
+print("\nClassification Report:")
+print(classification_report(y_test, y_pred))
+
+# Visualization (optional)
+plt.scatter(df['traffic_volume'], df['hour'], c=df['is_accident'], cmap='coolwarm')
+plt.xlabel('Traffic Volume')
+plt.ylabel('Hour of Day')
+plt.title('Traffic Accidents Based on Time & Volume')
+plt.colorbar(label='Accident (1) / No Accident (0)')
+plt.show()
